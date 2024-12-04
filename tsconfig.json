@@ -6,12 +6,15 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "outDir": "./dist", // Если вы хотите компилировать файлы в папку dist
     "plugins": [
       {
         "name": "next"
@@ -21,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/**/*.ts", "src/**/*.ts", "components/shared/search-input.tx"],
   "exclude": ["node_modules"]
 }
